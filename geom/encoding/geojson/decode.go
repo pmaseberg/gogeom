@@ -2,7 +2,7 @@ package geojson
 
 import (
 	"encoding/json"
-	"github.com/twpayne/gogeom/geom"
+	"github.com/pmaseberg/gogeom/geom"
 )
 
 func decodeCoordinates(jsonCoordinates interface{}) []float64 {

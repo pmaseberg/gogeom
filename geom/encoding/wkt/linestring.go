@@ -1,7 +1,7 @@
 package wkt
 
 import (
-	"github.com/twpayne/gogeom/geom"
+	"github.com/pmaseberg/gogeom/geom"
 )
 
 func appendLineStringWKT(dst []byte, lineString *geom.LineString) []byte {

@@ -3,8 +3,8 @@ package hex
 import (
 	"encoding/binary"
 	"encoding/hex"
-	"github.com/twpayne/gogeom/geom"
-	"github.com/twpayne/gogeom/geom/encoding/wkb"
+	"github.com/pmaseberg/gogeom/geom"
+	"github.com/pmaseberg/gogeom/geom/encoding/wkb"
 )
 
 func Encode(g geom.T, byteOrder binary.ByteOrder) (string, error) {

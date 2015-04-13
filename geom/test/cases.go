@@ -1,7 +1,7 @@
 package test
 
 import (
-	"github.com/twpayne/gogeom/geom"
+	"github.com/pmaseberg/gogeom/geom"
 )
 
 var cases = []struct {

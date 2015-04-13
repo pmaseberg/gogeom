@@ -4,9 +4,10 @@ import (
 	"bytes"
 	"encoding/binary"
 	"fmt"
-	"github.com/twpayne/gogeom/geom"
 	"io"
 	"reflect"
+
+	"github.com/pmaseberg/gogeom/geom"
 )
 
 const (
@@ -233,6 +234,13 @@ func Write(w io.Writer, byteOrder binary.ByteOrder, g geom.T) error {
 	if err := binary.Write(w, byteOrder, wkbGeometryType); err != nil {
 		return err
 	}
+
+	var SRID uint32
+	SRID = 4326
+	if err := binary.Write(w, byteOrder, SRID); err != nil {
+		return err
+	}
+
 	switch g.(type) {
 	case geom.Point:
 		return writePoint(w, byteOrder, g.(geom.Point))

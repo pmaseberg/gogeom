@@ -87,7 +87,7 @@ def main(argv):
     print 'package test'
     print
     print 'import ('
-    print '\t"github.com/twpayne/gogeom/geom"'
+    print '\t"github.com/pmaseberg/gogeom/geom"'
     print ')'
     print
     print 'var cases = []struct {'
