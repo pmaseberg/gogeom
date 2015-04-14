@@ -231,6 +231,10 @@ func Write(w io.Writer, byteOrder binary.ByteOrder, g geom.T) error {
 	default:
 		return &UnsupportedGeometryError{reflect.TypeOf(g)}
 	}
+
+	// SRID is set
+	wkbGeometryType = wkbGeometryType + 0x20000000
+
 	if err := binary.Write(w, byteOrder, wkbGeometryType); err != nil {
 		return err
 	}
